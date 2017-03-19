@@ -1,7 +1,7 @@
 # BMI_203_Final_Project
 
 [![Build
- Status](https://travis-ci.org/alisonsu/BMI_203_HW3.svg?branch=master)](https://travis-ci.org/alisonsu/BMI_203_HW3)
+ Status](https://travis-ci.org/alisonsu/BMI_203_Final_Project.svg?branch=master)](https://travis-ci.org/alisonsu/BMI_203_Final_Project)
 
 Skeleton for Final Project
 
