@@ -154,6 +154,8 @@ for train, test in skf.split(M, ys):
         label = "alpha: " + str(alpha)
         print("alpha:",alpha)
         np.random.seed(1)
+        
+        # Initialize deltaW and delta_B matrices
         del_W_L1 = np.zeros([input_layer_size,hidden_layer_size])
         del_B_L1 = np.zeros([1,hidden_layer_size])
         
