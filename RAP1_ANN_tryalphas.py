@@ -16,9 +16,15 @@ import matplotlib.pyplot as plt
 from sklearn import metrics
 
 def sigmoid(x):
+    """
+    This is the activation function
+    """
     return(1/(1+np.exp(-x)))
 
 def training(M_train_b,y_train_b, W1,W2,B1,B2, mean_error, x_values):
+    """
+    This function trains the neural network by performing forward and back propagation
+    """
     number_samples = M_train_b.shape[0] #number of samples in minibatch
     del_W_L1 = np.zeros([input_layer_size,hidden_layer_size])
     del_B_L1 = np.zeros([1,hidden_layer_size])
