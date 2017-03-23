@@ -217,7 +217,8 @@ for i,sequence in enumerate(test_seqs):
     a2_test = sigmoid(np.dot(test_matrix[i],W1)+B1)
     a3_test = sigmoid(np.dot(a2_test,W2)+B2)
     a3_output = float(a3_test)
-    print_seq = sequence + "\t" + str(a3_output) + "\n"
+    a3_output_cut = "%.3f" %a3_output
+    print_seq = sequence + "\t" + a3_output_cut + "\n"
     outfile.write(print_seq)
 
 outfile.close()
