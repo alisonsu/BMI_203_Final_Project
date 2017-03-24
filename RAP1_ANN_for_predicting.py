@@ -17,6 +17,7 @@ import numpy as np
 from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
 from sklearn import metrics
+import sys
 
 def sigmoid(x):
     return(1/(1+np.exp(-x)))
@@ -190,7 +191,9 @@ for train, test in skf.split(M, ys):
             if len(overall_mean_error) > 1:
                 if (overall_mean_error[-2]-overall_mean_error[-1]) < 1E-6:
                     break
-        
+            if iterations > 2000 and overall_mean_error[-1] > 0.01:
+                print("training error not converging.")
+                sys.exit(1)
         plt.figure(plt_index)
         plt.plot(x_values,overall_mean_error,color=color_map[color_index],label=label)
         plt.legend()
